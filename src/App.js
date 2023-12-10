@@ -1,9 +1,12 @@
 import React from 'react';
+import SearchBar from './Components/ImageList';
+import ImageList from './Components/ImageList';
 
 function App() {
     return (
         <div>
-            <h1>Testing</h1>
+            <SearchBar />
+            <ImageList />
         </div>
     );
 }
