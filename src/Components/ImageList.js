@@ -1,9 +1,21 @@
-import React from "react";
+const ImageList = ({images}) => {
 
-const ImageList = () => {
-    <div>
 
-    </div>
+
+    return(
+        <div>
+             {
+                images &&
+                images.map((value, index)=>{
+                    return (
+                    <img key={index} src={value.urls.small} alt={value.alt_description} />
+                    )
+                }    
+                )
+             }
+        </div>
+    )
+
 }
 
-export default ImageList;;
+export default ImageList;

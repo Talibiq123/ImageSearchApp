@@ -1,14 +1,21 @@
-import React from 'react';
-import SearchBar from './Components/ImageList';
-import ImageList from './Components/ImageList';
 
-function App() {
-    return (
-        <div>
-            <SearchBar />
-            <ImageList />
-        </div>
-    );
-}
+import React, {useState} from "react";
+import SearchBar from "./Components/SearchBar";
+import ImageList from "./Components/ImageList";
+
+
+const App = () => {
+  let [info, setInfo] = useState("");
+
+  console.log(info);
+
+  return (
+    <div>
+        <SearchBar  setInfo={setInfo}/> 
+        <ImageList  images={info} />
+       
+    </div>
+  )
+} 
 
 export default App;
